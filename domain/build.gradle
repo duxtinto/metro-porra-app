@@ -1,8 +1,20 @@
 apply plugin: 'java-library'
+apply plugin: 'org.junit.platform.gradle.plugin'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    testRuntime("org.junit.platform:junit-platform-launcher:$junitPlatformVersion")
+    testCompile("org.junit.platform:junit-platform-runner:$junitPlatformVersion")
+    testCompile "org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion"
+    testRuntime("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
+    testRuntime("org.junit.vintage:junit-vintage-engine:$junitVintageVersion")
+    testCompile "org.assertj:assertj-core:$assertjVersion"
+
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
-sourceCompatibility = "1.7"
-targetCompatibility = "1.7"
+junitPlatform {
+    details 'tree'
+}
