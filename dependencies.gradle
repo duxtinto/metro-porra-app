@@ -12,12 +12,15 @@ ext {
 
     // Libraries
 //    supportLibraryVersion = "24.2.1"
+    rxjava_version = '2.1.1'
 
     // Testing
     junit_platform_version = "1.0.0-M5"
     junit_jupiter_version = "5.0.0-M5"
     junit_vintage_version = "4.12.0-M5"
-    assertj_version = "3.8.0"
+    kotlintest_version = '2.0.3'
+    mockito_version = '2.+'
+//    assertj_version = "3.8.0"
 //    assertjAndroidVersion = "1.1.1"
 //    robolectricVersion = "3.1.2"
 //    testRunnerVersion = "0.5"
