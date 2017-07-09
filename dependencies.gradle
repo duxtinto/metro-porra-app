@@ -6,9 +6,10 @@ ext {
 //    defaultMinSdkVersion = 16
 //    defaultTargetSdkVersion = 24
 
-    // Java
+    // Languages
     defaultSourceCompatibility = JavaVersion.VERSION_1_8
     defaultTargetCompatibility = JavaVersion.VERSION_1_8
+    kotlin_version = '1.1.3'
 
     // Libraries
 //    supportLibraryVersion = "24.2.1"
