@@ -5,16 +5,18 @@ apply plugin: 'org.junit.platform.gradle.plugin'
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    testRuntime("org.junit.platform:junit-platform-launcher:$junitPlatformVersion")
-    testCompile("org.junit.platform:junit-platform-runner:$junitPlatformVersion")
-    testCompile "org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion"
-    testRuntime("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
-    testRuntime("org.junit.vintage:junit-vintage-engine:$junitVintageVersion")
-    testCompile "org.assertj:assertj-core:$assertjVersion"
-
-    sourceCompatibility = defaultSourceCompatibility
-    targetCompatibility = defaultTargetCompatibility
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+    
+    testCompile("org.junit.platform:junit-platform-runner:$junit_platform_version")
+    testCompile "org.junit.jupiter:junit-jupiter-api:$junit_jupiter_version"
+    testCompile "org.assertj:assertj-core:$assertj_version"
+    
+    testRuntime("org.junit.platform:junit-platform-launcher:$junit_platform_version")
+    testRuntime("org.junit.jupiter:junit-jupiter-engine:$junit_jupiter_version")
+    testRuntime("org.junit.vintage:junit-vintage-engine:$junit_vintage_version")
+
+    sourceCompatibility = java_version
+    targetCompatibility = java_version
 }
 
 junitPlatform {
@@ -33,11 +35,11 @@ repositories {
 }
 compileKotlin {
     kotlinOptions {
-        jvmTarget = defaultTargetCompatibility
+        jvmTarget = java_version
     }
 }
 compileTestKotlin {
     kotlinOptions {
-        jvmTarget = defaultTargetCompatibility
+        jvmTarget = java_version
     }
 }

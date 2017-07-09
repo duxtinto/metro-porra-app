@@ -7,8 +7,8 @@ buildscript {
         google()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:$androidPluginVer"
-        classpath ("org.junit.platform:junit-platform-gradle-plugin:1.0.0-M5")
+        classpath "com.android.tools.build:gradle:$android_plugin_version"
+        classpath ("org.junit.platform:junit-platform-gradle-plugin:$junit_platform_version")
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
