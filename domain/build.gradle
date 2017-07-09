@@ -12,7 +12,7 @@ dependencies {
     testCompile "org.junit.platform:junit-platform-runner:$junit_platform_version"
     testCompile "org.junit.jupiter:junit-jupiter-api:$junit_jupiter_version"
     testCompile "io.kotlintest:kotlintest:$kotlintest_version"
-    testCompile "org.mockito:mockito-core:$mockito_version"
+    testCompile "org.mockito:mockito-inline:$mockito_version"
 
     testRuntime "org.junit.platform:junit-platform-launcher:$junit_platform_version"
     testRuntime "org.junit.jupiter:junit-jupiter-engine:$junit_jupiter_version"
